@@ -4,7 +4,7 @@
 - CSS
 - JavaScript
 
-Created with [Elventy](http://github.com) Static Site  
+Created with [Elventy](http://github.com) Static Generator
 <br>
 [Demo](https://confident-mcclintock-bfbdc3.netlify.app/)
 
