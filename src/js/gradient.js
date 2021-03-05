@@ -1,34 +1,36 @@
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-const btn1 = document.getElementById("btn-1");
-const btn2 = document.getElementById("btn-2");
+const btns = document.querySelectorAll(".btn")
 const color1 = document.getElementById("hex-number-1");
 const color2 = document.getElementById("hex-number-2");
 const bgLeft = document.getElementById("body-background-left");
 const bgRight = document.getElementById("body-background-right");
+const body = document.body
 
-btn1.addEventListener('click', function() {
-    var randomNumber1 = "#";
+// console.log(btns);
+
+let randomColor1 = "#FFFFFF";
+let randomColor2 = '#FFFFFF';
+
+btns.forEach(function (btn) {
+    btn.addEventListener('click', function(e) {
+        const classes = e.currentTarget.classList;
+        // console.log(classes);
+        if (classes.contains('btn-1')) {
+            randomColor1 = getRandomHex();
+            color1.textContent = randomColor1;
+        } else if (classes.contains('btn-2')) {
+            randomColor2 = getRandomHex();
+            color2.textContent = randomColor2;
+        }
+        body.style.backgroundImage = "linear-gradient(to right, " + randomColor1 + ", " + randomColor2 + ")";
+    })
+})
+
+function getRandomHex() {
+    let randomHexNumber = "#";
     for (let i = 0; i < 6; i++) {
-        randomNumber1 += hex[getRandom()];
+        randomHexNumber += hex[Math.floor(Math.random() * hex.length)];
     }
-
-    bgLeft.style.backgroundImage = "linear-gradient(to right, " + randomNumber1 + " 50%, #FFFFFF)";  
-    color1.textContent = randomNumber1;
-});
-
-btn2.addEventListener('click', function() {
-    var randomNumber2 = "#";
-    for (let i = 0; i < 6; i++) {
-        randomNumber2 += hex[getRandom()];
-    }
-
-    bgRight.style.backgroundColor = randomNumber2;
-    bgRight.style.boxShadow = "-12.5vw 0px 100px 12.5vw" + randomNumber2;
-
-    color2.textContent = randomNumber2;
-});
-
-function getRandom() {
-    return Math.floor(Math.random() * hex.length);
+    return randomHexNumber;
 };
