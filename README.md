@@ -1,4 +1,5 @@
 # Background Color Flipper Site
+[![Netlify Status](https://api.netlify.com/api/v1/badges/54a3759a-2000-46ee-83e6-c7d05f1b0eef/deploy-status)](https://app.netlify.com/sites/timamero-color-flipper/deploys)
 
 - HTML
 - CSS
