@@ -1,7 +1,5 @@
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-// const btn1 = document.getElementById("btn-1");
-// const btn2 = document.getElementById("btn-2");
 const btns = document.querySelectorAll(".btn")
 const color1 = document.getElementById("hex-number-1");
 const color2 = document.getElementById("hex-number-2");
@@ -9,15 +7,12 @@ const bgLeft = document.getElementById("body-background-left");
 const bgRight = document.getElementById("body-background-right");
 const body = document.body
 
-// console.log(btns);
-
 let randomColor1 = "#FFFFFF";
 let randomColor2 = '#FFFFFF';
 
 btns.forEach(function (btn) {
     btn.addEventListener('click', function(e) {
         const classes = e.currentTarget.classList;
-        // console.log(classes);
         if (classes.contains('btn-1')) {
             randomColor1 = getRandomHex();
             color1.textContent = randomColor1;

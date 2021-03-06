@@ -7,15 +7,12 @@ const bgLeft = document.getElementById("body-background-left");
 const bgRight = document.getElementById("body-background-right");
 const body = document.body
 
-// console.log(btns);
-
 let randomColor1 = "#FFFFFF";
 let randomColor2 = '#FFFFFF';
 
 btns.forEach(function (btn) {
     btn.addEventListener('click', function(e) {
         const classes = e.currentTarget.classList;
-        // console.log(classes);
         if (classes.contains('btn-1')) {
             randomColor1 = getRandomHex();
             color1.textContent = randomColor1;
