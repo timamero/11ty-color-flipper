@@ -1,10 +1,8 @@
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
 const btns = document.querySelectorAll(".btn")
-const color1 = document.getElementById("hex-number-1");
-const color2 = document.getElementById("hex-number-2");
-const bgLeft = document.getElementById("body-background-left");
-const bgRight = document.getElementById("body-background-right");
+const color1 = document.getElementById("hex-1");
+const color2 = document.getElementById("hex-2");
 const body = document.body
 
 let randomColor1 = "#FFFFFF";
